@@ -7,7 +7,9 @@ Installation
 ------------
 
 Checkout the project into `~/.vim/`:
+
 `git checkout git://github.com/yock/vimrc.git`
 
 Run the `vim:link` Rake task
+
 `rake vim:link`
