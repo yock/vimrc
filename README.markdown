@@ -6,10 +6,8 @@ A lesser Vim configuration, shamelessly modeled after [Mutewinter's](http://twit
 Installation
 ------------
 
-Checkout the project into `~/.vim/`:
-
+Checkout the project into `~/.vim/`:<br />
 `git checkout git://github.com/yock/vimrc.git`
 
-Run the `vim:link` Rake task
-
+Run the `vim:link` Rake task<br />
 `rake vim:link`
