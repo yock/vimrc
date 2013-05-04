@@ -8,6 +8,7 @@ source ~/.vim/colors.vim
 
 source ~/.vim/bindings.vim
 
+set nomodeline
 set number
 set ruler
 set nowrap

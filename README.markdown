@@ -6,11 +6,11 @@ A lesser Vim configuration, shamelessly modeled after [Mutewinter's](http://twit
 Installation
 ------------
 
-Checkout the project into `~/.vim/`:<br />
-`git clone git://github.com/yock/vimrc.git`
+Checkout the project into ~/.vim/:<br />
+    git clone git://github.com/yock/vimrc.git ~/.vim
 
-Run the `vim:install` Rake task<br />
-`rake vim:install`
+Run the vim:install Rake task<br />
+    rake vim:install
 
-Start Vim and run `BundleInstall` in command mode:<br />
-`:BundleInstall`
+Start Vim and run BundleInstall in command mode:<br />
+    :BundleInstall
