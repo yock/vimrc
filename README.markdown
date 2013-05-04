@@ -9,5 +9,8 @@ Installation
 Checkout the project into `~/.vim/`:<br />
 `git clone git://github.com/yock/vimrc.git`
 
-Run the `vim:link` Rake task<br />
-`rake vim:link`
+Run the `vim:install` Rake task<br />
+`rake vim:install`
+
+Start Vim and run `BundleInstall` in command mode:<br />
+`:BundleInstall`

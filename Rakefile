@@ -3,7 +3,7 @@ require 'fileutils'
 FILES_TO_LINK = ['vimrc']
 DIRECTORIES_TO_CREATE = ['.undo','.backup','.tmp']
 
-task default: 'vim:link'
+task default: 'vim:install'
 
 namespace :vim do
   desc 'Create symlinks'
@@ -44,10 +44,9 @@ namespace :vim do
     end
   end
 
-  desc 'Clone and run Vundle'
+  desc 'Install Vundle'
   task :vundle do
     exec 'git clone http://github.com/gmarik/vundle.git bundle/vundle'
-    exec 'vim +BundleInstall +qall' 
   end
 
   desc 'Install this vimrc'
