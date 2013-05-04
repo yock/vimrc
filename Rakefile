@@ -1,4 +1,7 @@
+require 'fileutils'
+
 FILES_TO_LINK = ['vimrc']
+DIRECTORIES_TO_CREATE = ['.undo','.backup','.tmp']
 
 task default: 'vim:link'
 
@@ -24,4 +27,30 @@ namespace :vim do
     end
 
   end
+
+  desc 'Create directories'
+  task :mkdir do
+    begin
+      DIRECTORIES_TO_CREATE.each do |dir|
+        if File.exists? dir
+          puts "#{dir} exists. Skipping mkdir."
+        else
+          FileUtils.mkdir dir
+          puts "Created directory #{dir}."
+        end
+      end
+    rescue NotImplementedError
+      puts "FileUtils.mkdir not supported, you must do it manually."
+    end
+  end
+
+  desc 'Clone and run Vundle'
+  task :vundle do
+    exec 'git clone http://github.com/gmarik/vundle.git bundle/vundle'
+    exec 'vim +BundleInstall +qall' 
+  end
+
+  desc 'Install this vimrc'
+  task :install => [:link, :mkdir, :vundle]
 end
+
