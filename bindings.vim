@@ -19,3 +19,9 @@ nmap <silent> <leader>] gg=G
 
 " Clear search
 nnoremap <silent> <leader>/ :let @/ = ""<CR>
+
+" vim-rspec
+map <Leader>sf :call RunCurrentSpecFile()<CR>
+map <Leader>ss :call RunNearestSpec()<CR>
+map <Leader>sl :call RunLastSpec()<CR>
+map <Leader>sa :call RunAllSpecs()<CR>
