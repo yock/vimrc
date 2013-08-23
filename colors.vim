@@ -2,6 +2,16 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Force 256 colors if available
+if $TERM =~ "-256color"
+  set t_Co=256
+endif
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+  :hi ColorColumn ctermbg=Cyan
+endif
+
 " ==========
 " Signify
 " ==========
