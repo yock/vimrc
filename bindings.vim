@@ -8,8 +8,9 @@ nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
-" vimrc
+" Quick file access
 nmap <silent> <leader>v :e $MYVIMRC<CR>
+nmap <silent> <leader>g :e ~/.git-config/commit-template.txt<CR>
 
 " HTML tag completion
 imap <silent> \, <C-y>,
