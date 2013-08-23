@@ -13,6 +13,8 @@ set number
 set ruler
 set nowrap
 set hlsearch
+set laststatus=2
+set encoding=utf-8
 
 " -----------------------------
 " Backups, Tmp Files, and Undo
