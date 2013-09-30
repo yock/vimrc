@@ -8,6 +8,8 @@ source ~/.vim/colors.vim
 
 source ~/.vim/bindings.vim
 
+source ~/.vim/autocmds.vim
+
 set nomodeline
 set number
 set ruler
@@ -50,3 +52,4 @@ set incsearch
 " CtrlP Settings
 " ---------------
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = 'bundle'
