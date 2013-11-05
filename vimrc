@@ -1,3 +1,5 @@
+set shell=/bin/bash
+
 " Vundler setup and plugins
 source ~/.vim/vundle.vim
 
@@ -53,3 +55,13 @@ set incsearch
 " ---------------
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_custom_ignore = 'bundle'
+
+" ---------------
+" You Complete Me
+" ---------------
+let g:ycm_filetype_blacklist = {
+  \ 'notes' : 1,
+  \ 'markdown' : 1,
+  \ 'text' : 1,
+  \ 'php' : 1,
+\}
