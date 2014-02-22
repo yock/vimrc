@@ -10,3 +10,4 @@ colorscheme solarized
 if exists('+colorcolumn')
   set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
 endif
+

@@ -26,3 +26,6 @@ map <Leader>sf :call RunCurrentSpecFile()<CR>
 map <Leader>ss :call RunNearestSpec()<CR>
 map <Leader>sl :call RunLastSpec()<CR>
 map <Leader>sa :call RunAllSpecs()<CR>
+
+" Redraw!
+map <Leader>r :redraw!<CR>
