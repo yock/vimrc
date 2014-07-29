@@ -1,3 +1,6 @@
+" Leaving Ex mode, forever
+nnoremap Q <nop>
+
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
