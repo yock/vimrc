@@ -22,6 +22,12 @@ set hlsearch
 set laststatus=2
 set encoding=utf-8
 
+" --------------------------
+" Hybrid line number mode
+" --------------------------
+set relativenumber
+set number
+
 " -----------------------------
 " Backups, Tmp Files, and Undo
 " -----------------------------
