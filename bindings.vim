@@ -16,7 +16,7 @@ nmap <silent> <leader>v :e $MYVIMRC<CR>
 nmap <silent> <leader>g :e ~/.git-config/commit-template.txt<CR>
 
 " HTML tag completion
-imap <silent> \, <C-y>,
+imap <silent> \y <C-y>,
 
 " Re-indent text
 nmap <silent> <leader>] gg=G
