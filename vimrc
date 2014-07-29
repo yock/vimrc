@@ -12,6 +12,8 @@ source ~/.vim/bindings.vim
 
 source ~/.vim/autocmds.vim
 
+source ~/.vim/search.vim
+
 set nomodeline
 set number
 set ruler
