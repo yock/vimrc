@@ -5,9 +5,7 @@ endif
 
 syntax enable
 set background=dark
+let g:solarized_termtrans=1
 colorscheme solarized
 
-if exists('+colorcolumn')
-  set colorcolumn=80 " Color the 80th column differently as a wrapping guide.
-endif
-
+hi Comment ctermfg=DarkGrey guifg=DarkGrey
