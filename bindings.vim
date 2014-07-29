@@ -24,11 +24,15 @@ nmap <silent> <leader>] gg=G
 " Clear search
 nnoremap <silent> <leader>/ :let @/ = ""<CR>
 
-" vim-rspec
-map <Leader>sf :call RunCurrentSpecFile()<CR>
-map <Leader>ss :call RunNearestSpec()<CR>
-map <Leader>sl :call RunLastSpec()<CR>
-map <Leader>sa :call RunAllSpecs()<CR>
-
 " Redraw!
 map <Leader>r :redraw!<CR>
+
+" Turbux
+let g:no_turbux_mappings = 1 " Required for remapping Turbux
+map <Leader>tt <Plug>SendFocusedTestToTmux
+map <Leader>ta <Plug>SendTestToTmux
+
+if executable('spring')
+  let g:turbux_command_rspec = 'spring rspec'
+  let g:turbux_command_cucumber = 'spring cucumber'
+end
