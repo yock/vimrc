@@ -22,6 +22,9 @@ set hlsearch
 set laststatus=2
 set encoding=utf-8
 
+" Resize splits when the window is resized
+au VimResized * :wincmd =
+
 " Hybrid line number mode
 set relativenumber
 set number
