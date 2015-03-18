@@ -7,11 +7,8 @@ source ~/.vim/vundle.vim
 filetype plugin indent on
 
 source ~/.vim/colors.vim
-
 source ~/.vim/bindings.vim
-
 source ~/.vim/autocmds.vim
-
 source ~/.vim/search.vim
 
 set nomodeline
@@ -19,6 +16,7 @@ set number
 set ruler
 set nowrap
 set hlsearch
+set incsearch
 set laststatus=2
 set encoding=utf-8
 
@@ -73,3 +71,18 @@ let g:gist_post_private = 1
 
 " Vim Mustache Handlebars
 let g:mustache_abbreviations = 1
+
+" Visual Find and Replace
+function! VisualFindAndReplace()
+    :OverCommandLine%s/
+    :w
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+    :'<,'>OverCommandLine s/
+    :w
+endfunction
+
+nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
+xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+
+

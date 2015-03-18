@@ -32,7 +32,11 @@ let g:no_turbux_mappings = 1 " Required for remapping Turbux
 map <Leader>tt <Plug>SendFocusedTestToTmux
 map <Leader>ta <Plug>SendTestToTmux
 
-if executable('spring')
-  let g:turbux_command_rspec = 'spring rspec'
-  let g:turbux_command_cucumber = 'spring cucumber'
-end
+let g:turbux_command_rspec = 'bundle exec rspec'
+let g:turbux_command_cucumber = 'bundle exec cucumber'
+
+" Vimux
+nnoremap <leader>l :call VimuxRunLastCommand()<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
