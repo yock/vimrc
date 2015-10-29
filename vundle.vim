@@ -1,51 +1,20 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/vundle/
 
-call vundle#rc()
+call vundle#begin()
 
-" ==========
-" Required
-" ==========
+" let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
-" ==========
-" Plugins
-" ==========
-Plugin 'vim-scripts/Solarized'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'mhinz/vim-signify'
-Plugin 'mattn/emmet-vim'
-Plugin 'jszakmeister/vim-togglecursor'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/loremipsum'
-Plugin 'danro/rename.vim'
-Plugin 'chrisbra/csv.vim'
-Plugin 'jplaut/vim-arduino-ino'
-Plugin 'sudar/vim-arduino-syntax'
-Plugin 'scrooloose/syntastic'
-Plugin 'ivyl/vim-bling'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'mattn/gist-vim'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'mattn/webapi-vim'
-Plugin 'bling/vim-airline'
-Plugin 'benmills/vimux'
-Plugin 'jgdavey/vim-turbux'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tmhedberg/matchit'
-Plugin 'dsawardekar/portkey'
-Plugin 'dsawardekar/ember.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'osyo-manga/vim-over'
+" Source all the plugins with a global variable set that ensures only the
+" Plugin 'name' code will be called.
+let g:vundle_installing_plugins = 1
+for file in split(glob('$HOME/.vim/plugins/*.vim'), '\n')
+  exe 'source' fnameescape(file)
+endfor
+unlet g:vundle_installing_plugins
+
+call vundle#end()
+
