@@ -1,12 +1,12 @@
 set nocompatible
 filetype off
 
-set runtimepath+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Source all the plugins with a global variable set that ensures only the
 " Plugin 'name' code will be called.

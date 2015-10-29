@@ -46,7 +46,7 @@ namespace :vim do
 
   desc 'Install Vundle'
   task :vundle do
-    exec 'git clone http://github.com/gmarik/vundle.git bundle/vundle'
+    exec 'git cline git@github.com:VundleVim/Vundle.vim.git bundle/Vundle.vim'
   end
 
   desc 'Install this vimrc'
